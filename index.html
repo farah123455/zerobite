@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZeroBite</title>
+  <link rel="stylesheet" href="style.css">
+
+<style>
+/* === Assistance Form Styling === */
+#helpForm input,
+#helpForm select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  transition: 0.3s ease;
+
+
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+#helpForm input:focus,
+#helpForm select:focus {
+  border-color: #27ae60;
+  box-shadow: 0 0 5px rgba(39, 174, 96, 0.5);
+  outline: none;
+}
+
+#helpForm label {
+    display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 1rem auto;
+  font-weight: bold;
+  color: #34495e;
+  text-align: left;
+  margin-top: 5px;
+}
+
+#helpForm button {
+    display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 1rem auto;
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#helpForm button:hover {
+  background: #219150;
+}
+</style>
+
+
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="donation.html">Donation Centres</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to <span>ZeroBite</span></h1>
+      <p>Turning surplus food into smiles. Cook Smart, Donate and make a difference.</p>
+    </div>
+  </section>
+
+  <!-- Assistant Form Section -->
+  <section class="form-section">
+    <h2 style="text-align: center">💡 ZeroBite Assistance Form</h2>
+    <form id="helpForm">
+      <input type="text" id="name" name="name"placeholder="Your Name" required>
+      <input type="email" id="email" name="email"placeholder="Your Email" required>
+
+      <label for="helpType">Select the type of help you want:</label>
+      <select id="helpType" name="helpType" required onchange="toggleExtraFields()">
+        <option value="">--Choose an option--</option>
+        <option value="recipe">🍳 Cook with Leftovers</option>
+        <option value="compost">♻️ Composting Help</option>
+        <option value="donation">🏠 Donation Centres</option>
+      </select>
+
+      <div id="recipeFields" style="display:none; margin-top:10px;">
+        <input type="text" id="ingredients"  name="ingredients" placeholder="Enter your leftovers/ingredients">
+        <label>Do you also want donation info?</label>
+        <select id="donationOption" name="donate">
+          <option value="no">No</option>
+          <option value="yes">Yes</option>
+        </select>
+      </div>
+
+      <div id="donationFields" style="display:none; margin-top:10px;">
+    <input type="text" id="pincode" name="pincode" placeholder="Enter your Pincode / Location">
+    </div>
+
+      <button type="submit">Submit</button>
+    </form>
+    <p id="formMessage" style=" text-align: center; margin-top:10px; font-weight:bold;"></p>
+  </section>
+
+  <!-- Composting & Waste Tips -->
+  <section class="tips-section">
+    <h2>♻️ Compost & Waste Management Tips</h2>
+    <div class="tips-grid">
+      <div class="tip">
+        <h3>Kitchen Scraps to Compost</h3>
+        <p>Fruit peels, coffee grounds, and veggie stems make great compost material.</p>
+      </div>
+      <div class="tip">
+        <h3>Best Compost Bin</h3>
+        <p>For apartments, try a small aerobic bin to reduce smell and space usage.</p>
+      </div>
+      <div class="tip">
+        <h3>Eco-Friendly Fertilizer</h3>
+        <p>Banana peels and eggshells enrich soil naturally when composted.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipe of the Day -->
+  <section class="recipe-section">
+    <h2>🍳 Recipe of the Day (Leftovers Edition)</h2>
+    <div id="recipe-card" class="recipe-card">
+      <h3>Loading recipe...</h3>
+      <p>Please wait</p>
+    </div>
+  </section>
+
+  <!-- Impact Counter -->
+  <section class="impact-section">
+    <h2>🌍 Our Community Impact</h2>
+    <div class="impact-grid">
+      <div class="impact-box">
+        <h3 id="foodSaved">0</h3>
+        <p>Food Saved (kg)</p>
+      </div>
+      <div class="impact-box">
+        <h3 id="mealsDonated">0</h3>
+        <p>Meals Donated</p>
+      </div>
+      <div class="impact-box">
+        <h3 id="familiesComposting">0</h3>
+        <p>Families Composting</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join the Movement -->
+  <section class="join-section">
+    <h2>💚 Join the Movement</h2>
+    <p>Want to fight food waste? Be part of ZeroBite.</p>
+    <form id="joinForm" class="join-form">
+      <input type="text" id="joinName" placeholder="Your Name" required>
+      <input type="email" id="joinEmail" placeholder="Your Email" required>
+      <button type="submit">Join Us</button>
+    </form>
+    <p id="joinMessage" style="margin-top:10px; font-weight:bold;"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ZeroBite | Zero Hunger Zero Waste</p>
+  </footer>
+
+  <!-- =================== JS =================== -->
+   <script src="script.js"></script>
+
+</body>
+</html>

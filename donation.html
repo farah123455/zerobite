@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation Centres - ZeroBite</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <style>
+    /* Reset + fonts */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      text-align: center;
+      padding: 1rem;
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: white;
+      font-size: 1.3rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    nav a{
+      color: white;
+    }
+
+    nav a:hover {
+  color: #ffd700; /* golden hover effect */
+}
+    #map {
+      flex: 1;  /* Take all available space */
+      width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      background: #2c3e50;
+      color: white;
+      padding: 1rem;
+      font-size: 0.9rem;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    }
+
+    /* Popup styling */
+    .leaflet-popup-content-wrapper {
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    .leaflet-popup-content {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .leaflet-popup-content b {
+      font-size: 15px;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    🌍 ZeroBite | Donation Centres Near You
+<nav>
+    <a href="index.html">Home</a>
+    <a href="donation.html">Donation Centres</a>
+  </nav>
+    
+  </header>
+   
+  
+
+  <div id="map"></div>
+
+  <footer>
+    © 2025 ZeroBite | Zero Hunger Zero Waste
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initialize map centered in Goa
+    var map = L.map('map').setView([15.4909, 73.8278], 11);
+
+    // Tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Donation centres data
+    var centres = [
+      {
+        name: "Food Bank Goa",
+        location: [15.4989, 73.8289],
+        details: "📍 Panjim, Goa<br>☎️ +91 9876543210"
+      },
+      {
+        name: "NGO Helping Hands",
+        location: [15.2832, 73.9862],
+        details: "📍 Margao, Goa<br>☎️ +91 9123456780"
+      },
+      {
+        name: "Community Kitchen",
+        location: [15.3499, 74.0853],
+        details: "📍 Ponda, Goa<br>☎️ +91 9988776655"
+      }
+    ];
+
+   
+    centres.forEach(function(centre) {
+      L.marker(centre.location)
+        .addTo(map)
+        .bindPopup("<b>" + centre.name + "</b><br>" + centre.details);
+    });
+  </script>
+</body>
+</html>

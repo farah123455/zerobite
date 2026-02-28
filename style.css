@@ -1,0 +1,246 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+}
+
+/* Navigation */
+nav {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd700; /* golden hover effect */
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') 
+              no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero h1 span {
+  color: #ffd700;
+}
+
+.hero p {
+  font-size: 1.3rem;
+}
+
+/* Chat Section */
+.chat-section {
+  background: #f2f7fa;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.chat-section h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#chat-box {
+  margin: auto;
+  border-radius: 20px;
+  background: white;
+  padding: 20px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+#messages {
+  height: 220px;
+  overflow-y: auto;
+  border-radius: 10px;
+  background: #fafafa;
+  padding: 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+/* Differentiate user & bot messages */
+.user-msg {
+  text-align: right;
+  margin: 5px 0;
+  color: #222;
+  font-weight: bold;
+}
+
+.bot-msg {
+  text-align: left;
+  margin: 5px 0;
+  color: #444;
+  font-style: italic;
+}
+
+.input-area {
+  display: flex;
+  gap: 5px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.input-area button {
+  padding: 8px 12px;
+  border: none;
+  background: #ffd700;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.input-area button:hover {
+  background: #e6c200;
+}
+
+/* Donation Centres Section */
+.donation-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.donation-section h1 {
+  margin-bottom: 30px;
+}
+
+
+
+/* Recipe Section */
+.recipe-section {
+  padding: 2rem;
+  background: #fff;
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.recipe-card {
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+/* Tips Section */
+.tips-section {
+  padding: 2rem;
+  background: #f0f4f8;
+  text-align: center;
+}
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.tip {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Impact Section */
+.impact-section {
+  padding: 2rem;
+  text-align: center;
+  background: #fff;
+}
+.impact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.impact-box {
+  background: #f0f4f8;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  min-width: 120px;
+}
+.impact-box h3 {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+/* Join Section */
+.join-section {
+  padding: 2rem;
+  background: #f0f4f8;
+  text-align: center;
+}
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 1rem auto;
+}
+.join-form input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.join-form button {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.join-form button:hover {
+  background: #34495e;
+}
+
+/* Footer */
+footer {
+  background: #34495e;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
