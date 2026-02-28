@@ -121,14 +121,10 @@ Features Demonstrated:
 
 Each saved or donated meal contributes directly to climate action.
 
----
-
 ## 🏆 Conclusion
 
 ZeroBite demonstrates how technology and community action can intersect to reduce hunger, cut food waste, and combat climate change.
 ## Team
 Farah Cutchi
-Riya Shetgaonkar
-
-With scalability potential across India, ZeroBite aims to become a nationwide sustainability movement.
+Riya Shetgaonkar 
 
