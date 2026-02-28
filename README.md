@@ -125,6 +125,6 @@ Each saved or donated meal contributes directly to climate action.
 
 ZeroBite demonstrates how technology and community action can intersect to reduce hunger, cut food waste, and combat climate change.
 ## Team
-Farah Cutchi \n
+Farah Cutchi & 
 Riya Shetgaonkar 
 
